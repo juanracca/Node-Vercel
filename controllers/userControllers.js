@@ -2,11 +2,14 @@ const User = require('../models/user');
 const zod = require('zod');
 
 exports.getAllUsers = async (req,res) => {
+    console.log('La concha de tu vieja')
+    console.log(res)
     try {
         const users = await User.find();
         console.log(users)
         res.status(200).json(users);
     } catch (error) {
+        console.error(error.message)
         res.status(500).json({ message: error.message })
     };
 };

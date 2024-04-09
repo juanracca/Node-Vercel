@@ -3,6 +3,7 @@ const { getAllUsers, createUser, getUser, updadteUser, deleteUser } = require('.
 const router = express.Router();
 
 router.get('/', (req,res) => {
+    console.log('hola')
     getAllUsers(req,res);
 });
 
